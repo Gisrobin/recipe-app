@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import './App.css';
+import ReviewSection from './ReviewSection';
 
 function App() {
   const [search, setSearch] = useState('');
@@ -119,6 +120,8 @@ function App() {
                   target="_blank"
                   rel="noopener noreferrer"
                 >
+                  <ReviewSection mealId={recipe.idMeal} />
+
                   View Full Recipe
                 </a>
               )}
